@@ -1,40 +1,15 @@
 import React, { useState } from 'react';
 import './styles.css';
-import { FiEdit, FiTrash2, FiSearch, FiPlusSquare } from 'react-icons/fi';
+import { FiArrowLeft } from 'react-icons/fi';
+import { Link, useHistory } from 'react-router-dom';
 
 import Header from '../../components/Header';
 
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-// import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-// import Paper from '@material-ui/core/Paper';
-
-const useStyles = makeStyles({
-  table: {
-    minWidth: 650,
-    backgroundColor: 'transparent'
-  },
-});
-
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
+import illustration from '../../assets/svg/categoria.svg';
 
 export default function Categoria() {
-  const classes = useStyles();
-  const [search, setSearch] = useState('');
+  const history = useHistory();
+  const [description, setDescription] = useState('');
 
   function handleEdit(item) {
 
@@ -44,65 +19,35 @@ export default function Categoria() {
 
   }
 
-  function handleSearch() {
+  function handleBack() {
 
   }
 
   return (
     <div className='content'>
       <div className='page'>
-        <div className='search-area'>
+        <div className='header'>
           <Header title={'Categoria'} />
-          <form className='search'>
-            <input placeholder="Pesquisar"
-              value={search}
-              onChange={e => setSearch(e.target.value)}>
-            </input>
-            <FiSearch size={20} color="#35363E" />
-          </form>
-          <button type="button" onClick={() => handleSearch('')} className='add-button'>
-            <FiPlusSquare size={30} color="#FAFAFA" />
-            <span>Criar</span>
-          </button>
+          <Link to="/categorias" className="back-link">
+            <FiArrowLeft size={30} color="#35363E" />
+          </Link>
         </div>
-        <div className='wrapper'>
-          <Table className={classes.table} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell>Categoria</TableCell>
-                <TableCell align="center">Núm de perguntas</TableCell>
-                <TableCell align="center">Núm de respostas</TableCell>
-                <TableCell align="center">Ações</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="center">
-                    <div className='badge-cell'>
-                      <span className='badge badge-warn'>{row.calories}</span>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">
-                    <div className='badge-cell'>
-                      <span className='badge badge-info'>{row.fat}</span>
-                    </div>
-                  </TableCell>
-                  <TableCell className='action'>
-                    <button type="button" onClick={() => handleEdit('')} className='table-button edit-button'>
-                      <FiEdit size={20} color="#FAFAFA" />
-                    </button>
-                    <button type="button" onClick={() => handleRemove('')} className='table-button remove-button'>
-                      <FiTrash2 size={20} color="#FAFAFA" />
-                    </button>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+        <div className='form-wrapper'>
+          <div className='illustration'>
+            <img src={illustration} width={500} height={346} alt='Categoria' />
+          </div>
+          <div className='wrapper'>
+            <form>
+              <div className='input-group'>
+                <label>Descrição</label>
+                <input placeholder='' value={description} onChange={e => setDescription(e.target.value)} />
+              </div>
+              <div className='form-action'>
+                <button type="button" className='button-cancel' onClick={() => { history.goBack() }}>Cancelar</button>
+                <button type="submit" className='button'>Salvar</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
