@@ -60,7 +60,7 @@ export default function Categorias() {
             <FiSearch size={20} color="#35363E" />
           </form>
           <button type="button" onClick={() => handleSearch('')} className='add-button'>
-            <FiPlusSquare size={30} color="#FAFAFA" />
+            <FiPlusSquare size={20} color="#FAFAFA" />
             <span>Criar</span>
           </button>
         </div>

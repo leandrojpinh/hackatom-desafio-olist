@@ -93,7 +93,7 @@ export default function PerguntasRespostas() {
     <div className='content'>
       <div className='page'>
         <div className='header'>
-          <Header title={'Perguntas e Respostas'} />
+          <Header title={'Catálogo'} />
           <form>
             <input placeholder="Pesquisar"
               value={search}

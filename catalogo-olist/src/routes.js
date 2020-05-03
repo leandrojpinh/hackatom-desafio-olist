@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Responder from './pages/Responder';
+import PerguntasPendentes from './pages/PerguntasPendentes';
 import Produtos from './pages/Produtos';
-import PerguntasRespostas from './pages/PerguntasRespostas';
+import Catalogo from './pages/Catalogo';
 import PerguntaResposta from './pages/PerguntaResposta';
 import Categorias from './pages/Categorias';
 import Categoria from './pages/Categoria';
@@ -16,9 +16,9 @@ export default function Routes() {
       <Navigation />
       <Switch>
         {/* <Route path="/" exact component={Logon} /> */}
-        <Route path="/responder" component={Responder} />
+        <Route path="/perguntas-pendentes" component={PerguntasPendentes} />
         <Route path="/produtos" component={Produtos} />
-        <Route path="/perguntas-respostas" component={PerguntasRespostas} />
+        <Route path="/perguntas-respostas" component={Catalogo} />
         <Route path="/pergunta-resposta" component={PerguntaResposta} />
         <Route path="/categorias" component={Categorias} />
         <Route path="/categoria" component={Categoria} />
