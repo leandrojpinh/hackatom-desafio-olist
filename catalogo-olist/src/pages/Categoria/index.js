@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css';
+
 import { FiArrowLeft } from 'react-icons/fi';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -37,7 +38,7 @@ export default function Categoria() {
             <img src={illustration} width={500} height={346} alt='Categoria' />
           </div>
           <div className='wrapper'>
-            <form>
+            <form className='form-register'>
               <div className='input-group'>
                 <label>Descrição</label>
                 <input placeholder='' value={description} onChange={e => setDescription(e.target.value)} />

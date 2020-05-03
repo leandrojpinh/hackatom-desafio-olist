@@ -27,3 +27,5 @@
 .search-area button span {
   margin-left: .5em;
 }
+
+.action { display: flex;}
