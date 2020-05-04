@@ -4,9 +4,10 @@ import { useHistory } from 'react-router-dom';
 import { FiSearch } from 'react-icons/fi';
 
 import Header from '../../components/Header';
+import Navigation from '../../components/Navigation';
 import image from '../../assets/jpg/prod1.jpg';
 
-import respostas from '../../services/perguntas';
+import respostaService from '../../services/perguntas';
 
 // import Modal from '../../components/Modal';
 
@@ -17,7 +18,7 @@ export default function Responder() {
   const [perguntas, setPerguntas] = useState([]);
 
   useEffect(() => {
-    const data = respostas();
+    const data = respostaService();
 
     setPerguntas(data);
   }, []);
@@ -31,7 +32,9 @@ export default function Responder() {
   // };
 
   return (
-    <div className='content'>
+    <>
+      <Navigation />
+      <div className='content'>
       <div className='page'>
         <div className='header'>
           <Header title={'Perguntas pendentes'} />
@@ -60,5 +63,6 @@ export default function Responder() {
         </div>
       </div>
     </div>
+    </>
   );
 }
