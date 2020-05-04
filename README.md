@@ -7,7 +7,7 @@ Segue abaixo a prototipação no figma que desenvolvi para representar o alvo de
 https://www.figma.com/proto/sOKAV4SwT9yIARwovHGfFu/olist?node-id=49%3A257&scaling=min-zoom
 
 Segue abaixo também o link site publicado na versão inicial: 
-[https://catalogo-olist.netlify.app/]
+https://catalogo-olist.netlify.app/
 
 Para rodar o projeto após o clone deve rodar os comandos abaixo:
 ```
