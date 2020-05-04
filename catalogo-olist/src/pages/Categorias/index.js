@@ -27,13 +27,12 @@ export default function Categorias() {
   const history = useHistory();
   const classes = useStyles();
   const [search, setSearch] = useState('');
-  const [categoria, setCategoria] = useState([]);
+  const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
     const data = categoriaService();
 
-    setCategoria(data);
-
+    setCategorias(data);
   }, []);
 
   function handleEdit(item) {
@@ -78,7 +77,7 @@ export default function Categorias() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {categoria.map((item) => (
+                {categorias.map((item) => (
                   <TableRow key={item.id}>
                     <TableCell component="th" scope="row">
                       {item.categoria}
