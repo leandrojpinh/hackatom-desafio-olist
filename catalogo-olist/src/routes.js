@@ -14,7 +14,6 @@ import Navigation from './components/Navigation';
 export default function Routes() {
   return (
     <BrowserRouter>
-      <Navigation />
       <Switch>
         <Route path="/" exact component={Logon} />
         <Route path="/perguntas-pendentes" component={PerguntasPendentes} />

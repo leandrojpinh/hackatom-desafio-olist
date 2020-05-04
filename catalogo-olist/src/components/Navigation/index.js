@@ -40,8 +40,15 @@ export default function Navigation() {
     history.push(`/${url}`);
   }
 
+  function hanleLogout() {
+    document.getElementById('drawer').click();
+
+    history.push('/');
+  }
+
   const list = () => (
     <div
+      id='drawer'
       className={classes.list}
       role="presentation"
       onClick={toggleDrawer(false)}
@@ -82,7 +89,7 @@ export default function Navigation() {
 
   return (
     <nav>
-      <Drawer anchor={'left'} open={isOpen} onClose={toggleDrawer(false)}>
+      <Drawer anchor={'left'} open={isOpen} onClose={toggleDrawer(false)} >
         <div className='profile primary-dark'>
           <div>
             <img src={profile} width={100} height={100} alt="" />
@@ -93,7 +100,7 @@ export default function Navigation() {
               <span>Serviço ativo</span>
               <div className='circle' />
             </div>
-            <button>
+            <button onClick={hanleLogout}>
               <FiPower size={25} color="#FAFAFA" />
             </button>
           </div>
@@ -101,10 +108,12 @@ export default function Navigation() {
         {list()}
       </Drawer>
       <div className='navigation'>
-        <button onClick={() => setIsOpen(true)}>
-          <FiMenu size={30} color="#FAFAFA" />
-        </button>
-        <h2>Catálogo Olist</h2>
+        <div className='title'>
+          <button onClick={() => setIsOpen(true)}>
+            <FiMenu size={30} color="#FAFAFA" />
+          </button>
+          <h2>Catálogo Olist</h2>
+        </div>
         <div className='menu'>
           <Link className='active' to='/perguntas-pendentes'>Perguntas Pendentes</Link>
           {/* <Link className='' to='/produtos'>Produtos</Link> */}

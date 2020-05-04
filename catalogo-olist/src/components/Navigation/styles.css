@@ -32,6 +32,15 @@ nav .navigation button:hover {
   filter: brightness(90%);
 }
 
+nav .navigation .title {
+  display: flex;
+  align-items: center;
+}
+
+nav .navigation .title h2 {
+  margin-left: 20px;
+}
+
 nav .menu {
   font-size: 18px;
   font-weight: 500;
