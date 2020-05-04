@@ -18,7 +18,7 @@ export default function Routes() {
         {/* <Route path="/" exact component={Logon} /> */}
         <Route path="/perguntas-pendentes" component={PerguntasPendentes} />
         <Route path="/produtos" component={Produtos} />
-        <Route path="/perguntas-respostas" component={Catalogo} />
+        <Route path="/catalogo" component={Catalogo} />
         <Route path="/pergunta-resposta" component={PerguntaResposta} />
         <Route path="/categorias" component={Categorias} />
         <Route path="/categoria" component={Categoria} />

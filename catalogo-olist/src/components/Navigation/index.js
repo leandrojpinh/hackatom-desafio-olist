@@ -13,7 +13,7 @@ export default function Navigation() {
           <Link className='active' to='/perguntas-pendentes'>Perguntas Pendentes</Link>
           {/* <Link className='' to='/produtos'>Produtos</Link> */}
           {/* <Link className='' to='/categorias'>Perguntas e Respostas</Link> */}
-          <Link className='' to='/perguntas-respostas'>Catálogo</Link>
+          <Link className='' to='/catalogo'>Catálogo</Link>
         </div>
         <div className='user'>
           <span>Vendedor 1</span>
