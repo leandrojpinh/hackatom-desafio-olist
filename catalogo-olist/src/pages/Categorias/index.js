@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './styles.css';
 
 import Header from '../../components/Header';
@@ -32,11 +33,12 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 export default function Categorias() {
+  const history = useHistory();
   const classes = useStyles();
   const [search, setSearch] = useState('');
 
   function handleEdit(item) {
-
+    history.push('/categoria', item);
   }
 
   function handleRemove(item) {
@@ -51,7 +53,7 @@ export default function Categorias() {
     <div className='content'>
       <div className='page'>
         <div className='search-area'>
-          <Header title={'Categoria'} />
+          <Header title={'Categorias'} />
           <form className='search'>
             <input placeholder="Pesquisar"
               value={search}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import Logon from './pages/Logon';
 import PerguntasPendentes from './pages/PerguntasPendentes';
 import Produtos from './pages/Produtos';
 import Catalogo from './pages/Catalogo';
@@ -15,7 +16,7 @@ export default function Routes() {
     <BrowserRouter>
       <Navigation />
       <Switch>
-        {/* <Route path="/" exact component={Logon} /> */}
+        <Route path="/" exact component={Logon} />
         <Route path="/perguntas-pendentes" component={PerguntasPendentes} />
         <Route path="/produtos" component={Produtos} />
         <Route path="/catalogo" component={Catalogo} />

@@ -16,6 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F5F5F5;
+  /* overflow: overlay; */
 }
 
 code {
@@ -25,27 +26,6 @@ code {
 
 button {
   cursor: pointer;
-}
-
-form input {
-  width: 100%;
-  height: 40px;
-  color: #35363E;
-  border: 1px solid #E0E0E0;
-  background-color: #FAFAFA;
-  border-radius: 4px;
-  padding: 0 15px;
-}
-
-form textarea {
-  width: 100%;
-  resize: vertical;
-  min-height: 140px;
-  color: #333;
-  border: 1px solid #dcdce6;
-  border-radius: 8px;
-  padding: 16px 24px;
-  line-height: 24px;
 }
 
 .button {
@@ -108,6 +88,7 @@ form textarea {
 }
 
 .primary-dark {
+  color: #FAFAFA;
   background-color: #0A1F9C;
 }
 
@@ -128,7 +109,7 @@ form textarea {
 }
 
 .secondary-green {
-  background-color: #0DE49F
+  color: #0DE49F
 }
 
 .success {

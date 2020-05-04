@@ -23,6 +23,15 @@ nav .navigation > h2 {
   font-size: 30px;
 }
 
+nav .navigation button {
+  background-color: transparent;
+  border: 0;
+  transition: filter 0.2s;
+}
+nav .navigation button:hover {
+  filter: brightness(90%);
+}
+
 nav .menu {
   font-size: 18px;
   font-weight: 500;
@@ -48,4 +57,65 @@ nav .user span {
 
 nav .user button {
   margin-left: 2em;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-bottom: 5px solid #0DE49F;
+}
+
+.profile div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile div strong {
+  font-size: 20px;
+  margin-top: 24px;
+}
+
+.profile div+div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.profile div+div div {
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.profile div+div div span {
+  font-size: 12px;
+  color: #0DE49F;
+}
+
+.profile div+div div div {
+  width: 15px;
+  height: 15px;
+  background-color: #0DE49F;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.profile div+div button {
+  background-color: transparent;
+  border: 0;
+  transition: filter 0.2s;
+}
+
+.profile div+div button:hover {
+  filter: brightness(90%);
+}
+
+.separator {
+  font-size: 12px;
+  padding: 16px;
+  font-weight: 500;
 }
