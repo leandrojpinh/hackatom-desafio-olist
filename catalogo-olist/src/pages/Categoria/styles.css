@@ -1,8 +1,3 @@
-.header {
-  display: flex;
-  margin-bottom: 20px;
-}
-
 .form-wrapper {
   display: flex;
   align-items: start;
@@ -39,4 +34,18 @@
   background-color: #FAFAFA;
   border-radius: 4px;
   padding: 0 15px;
+}
+
+@media (max-width: 715px) {
+  .header {
+    flex-direction: row !important;
+    padding: 0 15px !important;
+  }
+
+  .header button {
+    margin: 10px 0 0 0 !important;
+    margin-top: 10px;
+    height: 40px;
+  }
+
 }

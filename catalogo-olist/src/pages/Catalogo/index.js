@@ -16,7 +16,7 @@ import catalogoService from '../../services/catalogo';
 
 const useStyles = makeStyles((theme) => ({
   table: {
-    minWidth: 650,
+    minWidth: 300,
     backgroundColor: 'transparent'
   },
   margin: {
