@@ -1,0 +1,17 @@
+.wrapper ul li div {
+  margin-top: 0;
+}
+
+@media (max-width: 715px) {
+  .header form {
+    margin-top: 10px !important;
+    padding: 15px !important;
+  }
+
+  .header button {
+    margin: 10px 0 0 0 !important;
+    margin-top: 10px;
+    height: 40px;
+  }
+
+}

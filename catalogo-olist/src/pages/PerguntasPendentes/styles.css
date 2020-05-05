@@ -38,3 +38,46 @@
   margin-left: 10px;
   text-align: left;
 }
+
+.header {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1080px) {
+  .wrapper ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    list-style: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .wrapper ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    list-style: none;
+  }
+}
+
+@media (max-width: 715px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header form {
+    margin-top: 10px !important;
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    list-style: none;
+  }
+}

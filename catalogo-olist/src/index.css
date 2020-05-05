@@ -141,6 +141,7 @@ button {
   flex-direction: column;
   max-width: 1180px;
   margin-bottom: 3em;
+  padding: 0 20px;
 }
 
 .wrapper {

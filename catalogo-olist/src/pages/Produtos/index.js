@@ -38,7 +38,7 @@ export default function Produtos() {
       <Navigation />
       <div className='content'>
         <div className='page'>
-          <div className='search-area'>
+          <div className='header'>
             <Header title={'Meus Produtos'} />
             <form className='search'>
               <input placeholder="Pesquisar"

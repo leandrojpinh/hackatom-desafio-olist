@@ -17,6 +17,7 @@ nav .navigation {
   width: 100%;
   position: static;
   height: 60px;
+  padding: 0 20px;
 }
 
 nav .navigation > h2 {
@@ -127,4 +128,10 @@ nav .user button {
   font-size: 12px;
   padding: 16px;
   font-weight: 500;
+}
+
+@media (max-width: 778px) {
+  nav .navigation .menu {
+    display: none;
+  }
 }

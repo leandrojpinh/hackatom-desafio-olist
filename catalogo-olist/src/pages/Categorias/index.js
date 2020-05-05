@@ -52,7 +52,7 @@ export default function Categorias() {
       <Navigation />
       <div className='content'>
         <div className='page'>
-          <div className='search-area'>
+          <div className='header'>
             <Header title={'Categorias'} />
             <form className='search'>
               <input placeholder="Pesquisar"
